@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Objects</title>
+</head>
+<body>
+	<script>
+		let img = {
+		src: 'https://www.google.com.ua/logos/doodles/2017/bella-akhmadulinas-80th-birthday-5134676388741120.3-law.gif',
+		alt: '',
+		style: 'border: 1px solid #ccc',
+		width: 200
+	};
+
+	let elemImg = document.createElement('img');
+	document.body.appendChild(elemImg);
+
+	for (let key in img) {
+
+		let elemSrc = document.createElement('src');
+		elemImg.appendChild(elemSrc);
+		elemSrc.innerHTML = img[key];
+
+		let elemAlt = document.createElement('alt');
+		elemImg.appendChild(elemAlt);
+
+		let elemStyle = document.createElement('style');
+		elemImg.appendChild(elemStyle);
+
+		let elemWidth = document.createElement('width');
+		elemImg.appendChild(elemWidth);
+	}
+	
+		// Не знаю как в скрипте обратиться к ранее сгенерированному объекту из предыдущей задачи чтобы отобразить результат на странице в браузере.
+		// Поэтому вставил заготовочку объекта person в этом задании.
+	/*
+	let person = {
+		phone: 380930123456,
+		name: 'Alxndr',
+		sex: 'male',
+	};
+
+	let elemDiv = document.createElement('div');
+		document.body.appendChild(elemDiv);
+
+	let descriptList = document.createElement('dl');
+		elemDiv.appendChild(descriptList);
+
+	for (let key in person) {
+
+		let descriptTermin = document.createElement('dt');
+		descriptList.appendChild(descriptTermin);
+		descriptTermin.innerText = key;
+
+		let descriptDefenition = document.createElement('dd');
+		descriptList.appendChild(descriptDefenition);
+		descriptDefenition.innerText = person[key];
+	}
+	*/
+	</script>
+</body>
+</html>
